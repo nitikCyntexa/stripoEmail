@@ -37,11 +37,14 @@ request(options, function (error, response) {
   console.log(response.body);
   var body2 = JSON.parse(response.body);
   token =  body2["data"];
-
+  for(var key in body2){
+    var n=body2[key].name
+    console.log("name"+n);
+  }
   console.log("token==="+token);
-  var body3=JSON.parse(token.name);
+  //var body3=JSON.parse(token.name);
   //token1=body3["name"];
-  console.log("token1==="+body3);
+  //console.log("token1==="+body3);
   //console.log(response.body.data);
 });
 console.log("byeee")
