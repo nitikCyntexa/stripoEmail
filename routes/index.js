@@ -95,4 +95,5 @@ console.log("byeee")
     dropdownOptions: json1,
     
   });
+  json1=[];
 };
