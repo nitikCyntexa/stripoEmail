@@ -51,6 +51,7 @@ function onRender() {
 function initialize(data) {
     if (data) {
         payload = data;
+        console.log("payload====="+payload)
     }
     const hasInArguments = Boolean(
         payload['arguments'] &&
