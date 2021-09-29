@@ -35,7 +35,7 @@ request(options, function (error, response) {
   console.log("in the op")
   console.log(response.body);
   var body2 = JSON.parse(response.body);
-  token =  body2["data"];
+  token =  body2["data"]["name"];
   console.log("token==="+token);
   //console.log(response.body.data);
 });
