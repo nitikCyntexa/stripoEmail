@@ -37,10 +37,17 @@ request(options, function (error, response) {
   console.log(response.body);
   var body2 = JSON.parse(response.body);
   token =  body2["data"];
+  var json1=[];
   for(var key in token){
     var n=token[key].name
     console.log("name"+n);
+    json1.push( {
+      name: n,
+      value: n,
+    });
+    
   }
+  console.log("json1==="+json1);
   console.log("token==="+token);
   //var body3=JSON.parse(token.name);
   //token1=body3["name"];
@@ -50,15 +57,7 @@ request(options, function (error, response) {
 console.log("byeee")
   res.render('index', {
     title: 'Custom Activity',
-    dropdownOptions: [
-      {
-        name: 'Journey Entry',
-        value: 'journeyEntry',
-      },
-      {
-        name: 'Journey Exit',
-        value: 'journeyExit',
-      },
-    ],
+    dropdownOptions: json1,
+    
   });
 };
