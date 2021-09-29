@@ -47,7 +47,7 @@ request(options, function (error, response) {
     });
     
   }
-  console.log("json1==="+json1);
+  console.log("json1==="+JSON.stringify(json1));
   console.log("token==="+token);
   //var body3=JSON.parse(token.name);
   //token1=body3["name"];
