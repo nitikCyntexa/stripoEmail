@@ -36,7 +36,7 @@ request(options, function (error, response) {
   console.log(response.body);
   var body2 = JSON.parse(response.body);
   token =  body2["data"];
-  console.log("token==="+response.body.data);
+  console.log("token==="+token);
   //console.log(response.body.data);
 });
 console.log("byeee")
