@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 var request = require('request');
+var token, token1;
 /**
  * Render Config
  * @param req
@@ -36,7 +37,11 @@ request(options, function (error, response) {
   console.log(response.body);
   var body2 = JSON.parse(response.body);
   token =  body2["data"];
+
   console.log("token==="+token);
+  var body3=JSON.parse(token);
+  token1=body3["name"];
+  console.log("token1==="+token1);
   //console.log(response.body.data);
 });
 console.log("byeee")
