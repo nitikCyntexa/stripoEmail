@@ -38,7 +38,7 @@ request(options, function (error, response) {
   var body2 = JSON.parse(response.body);
   token =  body2["data"];
   for(var key in token){
-    var n=body2[key].name
+    var n=token[key].name
     console.log("name"+n);
   }
   console.log("token==="+token);
